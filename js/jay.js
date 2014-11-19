@@ -1,6 +1,7 @@
 //来来来，到这里运行你的Javascript
-function jayfunction() {    
-define(["framework7.min"],function() {
+function jayfunction() {
+console.log("running Jay function");
+require(["framework7.min"],function() {
     //实例化app
 	var app = new Framework7({
 		animateNavBackIcon: true
@@ -10,6 +11,9 @@ define(["framework7.min"],function() {
 	var mainView = app.addView('.view-main', {
 		dynamicNavbar: true
 	});
+    mainView.hideNavbar();
+    console.log(mainView)
+    
 });
 //@jayfunction end
-};
+}

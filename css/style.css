@@ -27,3 +27,39 @@
 
 
 ********************************************************************************************  */
+* {
+    border-width: 0.5px;
+}
+.txa-c {text-align: center;}
+.app-content-logo {
+    text-align: center;
+}
+.app-content-logo:before {
+    content: '';
+    background: url(../images/logo.png) center center no-repeat;
+    -webkit-background-size: 150px;
+    background-size: 150px;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+.app-content-logo p {
+    font-size: 48px;
+    font-weight: normal;
+    margin:-10px 0 10px 0;
+    color: #fdab00;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+}
+.index-select-list {}
+.index-select-list i.icon {
+    font-size: 24px;
+    line-height: 24px;
+    width: 24px;
+    text-align: center;
+    color: #fdab00;
+}
+.toolbar-inner p.txa-c {
+    margin: 0;
+    width: 100%;
+    font-size: 12px;
+}

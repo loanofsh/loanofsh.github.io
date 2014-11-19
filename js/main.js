@@ -24,7 +24,8 @@ require.config({
 
 //加载对应css模块
 require([
-	"css!http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min",
+	//"css!http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min",
+	"css!../css/style1",
 	"css!../css/style2"
 ]);
 
@@ -38,11 +39,9 @@ require(['modernizr'],function(modernizr) {
 
 require(['domReady'], function (domReady) {
 	domReady(function () {
-	require(['jay'], 
-		function (jay){
-			jayfunction();	
-		}
-	);
+	require(['jay'],function() {
+        jayfunction()
+    });
 	//@Dom ready
 	});
 });
