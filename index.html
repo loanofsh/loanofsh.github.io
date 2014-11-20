@@ -44,8 +44,6 @@
 <body>
 	<!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
-    <!-- Panels overlay-->
-    <div class="panel-overlay"></div>
     <!-- Views -->
     <div class="views">
     	<div class="view view-main hidden-navbar">
@@ -112,7 +110,23 @@
 			</div>
     	</div>
     </div>
-    
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Right panel -->
+    <div class="panel custom-color panel-right panel-cover">
+        <div class="content-block">
+            <div class="buttons-row">
+                <a href="#side-right-tab1" class="tab-link active button">我要贷款</a>
+                <a href="#side-right-tab2" class="tab-link button">我要投资</a>
+            </div>    
+        </div>
+        <div class="content-block">
+            <div class="tabs">
+                <div class="tab active" id="side-right-tab1">asdasd</div>
+                <div class="tab" id="side-right-tab2">2</div>
+            </div>
+        </div>
+    </div>
 <script src="js/require.js" data-main="js/main" ></script>	
 </body>
 </html>

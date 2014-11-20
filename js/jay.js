@@ -4,7 +4,8 @@ console.log("running Jay function");
 require(["framework7.min"],function() {
     //实例化app
 	var app = new Framework7({
-		animateNavBackIcon: true
+		animateNavBackIcon: true,
+        swipePanel: 'right'
 	});
 	var $7 = Dom7;
 	// Add view 实例化view层
@@ -12,7 +13,10 @@ require(["framework7.min"],function() {
 		dynamicNavbar: true
 	});
     mainView.hideNavbar();
-    console.log(mainView)
+    $7("#test").on("click",function() {
+       app.params.swipePanel = false;
+    });
+    console.log(app)
     
 });
 //@jayfunction end

@@ -30,6 +30,8 @@
 * {
     border-width: 0.5px;
 }
+.list-block .item-link .item-inner {
+}
 .txa-c {text-align: center;}
 .app-content-logo {
     text-align: center;
@@ -62,4 +64,26 @@
     margin: 0;
     width: 100%;
     font-size: 12px;
+}
+@-webkit-keyframes show_panel_overlay {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@keyframes show_panel_overlay {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+.panel-overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+    -webkit-animation: show_panel_overlay;
+    animation: show_panel_overlay;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.custom-color {
+    background-color: #fff;
 }
