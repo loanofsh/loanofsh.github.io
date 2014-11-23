@@ -46,7 +46,7 @@
     <div class="statusbar-overlay"></div>
     <!-- Views -->
     <div class="views">
-    	<div class="view view-main hidden-navbar">
+    	<div class="view view-main hidden-navbar theme-orange">
     		<!-- Pages -->
 			<div class="pages">
 			    <!--NAV BAR-->
@@ -113,17 +113,151 @@
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Right panel -->
-    <div class="panel custom-color panel-right panel-cover">
+    <div class="panel custom-color panel-right panel-cover theme-orange">
         <div class="content-block">
             <div class="buttons-row">
                 <a href="#side-right-tab1" class="tab-link active button">我要贷款</a>
                 <a href="#side-right-tab2" class="tab-link button">我要投资</a>
             </div>    
         </div>
-        <div class="content-block">
+        <div class="content-tabs">
             <div class="tabs">
-                <div class="tab active" id="side-right-tab1">asdasd</div>
-                <div class="tab" id="side-right-tab2">2</div>
+                <div class="tab active" id="side-right-tab1">
+                    <form action="" class="list-block inset">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">姓名</div>
+                                    <div class="item-input">
+                                        <input type="text" name="name" placeholder="您的姓名">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content">       
+                                <div class="item-inner">
+                                    <div class="item-title label">联系电话</div>
+                                    <div class="item-input">
+                                        <input type="text" name="phone" placeholder="您的联系电话">
+                                    </div>
+                                </div>
+                            </li>    
+                            <li class="item-content">    
+                                <div class="item-inner">
+                                    <div class="item-title label">贷款金额</div>
+                                    <div class="item-input">
+                                        <input type="text" name="phone" placeholder="单位:万元">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content">    
+                                <div class="item-inner">
+                                    <div class="item-title label">居住地址</div>
+                                    <div class="item-input">
+                                        <input type="text" name="address" placeholder="请尽量详细">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        
+						<div class="custom-select">
+							<p>
+								<div class="buttons-row">
+									<label class="button label-radio item-content"><!-- Checked by default -->
+										<input type="radio" name="my-radio" value="has_house" checked="">
+										<div class="item-inner">
+											<div class="item-title">有房</div>
+										</div>
+									</label>
+		
+									<label class="button label-radio item-content"><!-- Checked by default -->
+										<input type="radio" name="my-radio" value="no_house" checked="">
+										<div class="item-inner">
+											<div class="item-title">无房</div>
+										</div>
+									</label>
+								</div>
+							</p>
+							<p>
+								<div class="buttons-row">
+									<label class="button label-radio item-content"><!-- Checked by default -->
+										<input type="radio" name="my-radio2" value="has_car" checked="">
+										<div class="item-inner">
+											<div class="item-title">有车</div>
+										</div>
+									</label>
+		
+									<label class="button label-radio item-content"><!-- Checked by default -->
+										<input type="radio" name="my-radio2" value="no_car" checked="">
+										<div class="item-inner">
+											<div class="item-title">无车</div>
+										</div>
+									</label>
+								</div>
+							</p>
+							<p>
+								<div class="buttons-row">
+									<label class="button label-radio item-content"><!-- Checked by default -->
+										<input type="radio" name="my-radio3" value="company" checked="">
+										<div class="item-inner">
+											<div class="item-title">公司</div>
+										</div>
+									</label>
+		
+									<label class="button label-radio item-content"><!-- Checked by default -->
+										<input type="radio" name="my-radio3" value="person" checked="">
+										<div class="item-inner">
+											<div class="item-title">个人</div>
+										</div>
+									</label>
+								</div>
+							</p>
+						</div>
+                    </form>
+                    <div class="content-block">
+                        <a href="#" class="button button-round button-fill">发 布</a>
+                    </div>
+                </div>
+                <div class="tab" id="side-right-tab2">
+                    <form action="" class="list-block inset">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">姓名</div>
+                                    <div class="item-input">
+                                        <input type="text" name="name" placeholder="您的姓名">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content">       
+                                <div class="item-inner">
+                                    <div class="item-title label">联系电话</div>
+                                    <div class="item-input">
+                                        <input type="text" name="phone" placeholder="您的联系电话">
+                                    </div>
+                                </div>
+                            </li>    
+                            <li class="item-content">    
+                                <div class="item-inner">
+                                    <div class="item-title label">投资金额</div>
+                                    <div class="item-input">
+                                        <input type="text" name="phone" placeholder="单位:万元">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content align-top">    
+                                <div class="item-inner">
+                                    <div class="item-title label">投资要求</div>
+                                    <div class="item-input">
+                                        <textarea name="requs" id=""></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                    <div class="content-block">
+                        <a href="#" class="button button-round button-fill">发 布</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

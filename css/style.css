@@ -32,6 +32,9 @@
 }
 .list-block .item-link .item-inner {
 }
+.list-block input[type="text"], .list-block input[type="password"], .list-block input[type="email"], .list-block input[type="tel"], .list-block input[type="url"], .list-block input[type="date"], .list-block input[type="datetime-local"], .list-block input[type="number"], .list-block select, .list-block textarea {
+    line-height: normal;
+}
 .txa-c {text-align: center;}
 .app-content-logo {
     text-align: center;
@@ -85,5 +88,11 @@
     animation-timing-function: linear;
 }
 .custom-color {
-    background-color: #fff;
+    background-color: #efeff4;
 }
+
+.custom-select {}
+.custom-select .label-radio {background-color: #fff; color: #ff9500;}
+.custom-select {}
+.custom-select {}
+.custom-select {}
