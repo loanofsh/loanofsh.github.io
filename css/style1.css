@@ -36,4 +36,9 @@ only screen and (min-device-pixel-ratio: 2) {
     .app-content-logo:before {
         background-image: url(../images/logo-@2x.png)
     }
+    * {
+        border-width: 0.5px;
+    }
 }
+
+

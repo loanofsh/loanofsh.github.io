@@ -55,41 +55,52 @@
 					<div class="navbar-inner">
 						<!-- We have home navbar without left link-->
 						<a href="#" class="link back left"><i class="icon icon-back"></i><span>返回</span></a>
-						<div class="center sliding">登录</div>
-						<!-- Right link -->
+						<div class="center sliding">密码重置</div>
 					</div>
 				</div>
-				<div data-page="user_login" class="page navbar-fixed toolbar-through">
+				<div data-page="user_reset_psw" class="page navbar-fixed toolbar-through">
                     <div class="page-content">
-						<form action="" class="list-block inset user-login-form" id="USER_LOGIN_FORM">
-							<ul>
-								<li>
-									<div class="item-content">
-									    <div class="item-media"><i class="icon ion-ios7-telephone-outline"></i></div>
-										<div class="item-inner">
-											<!--<div class="item-input"><input type="number" name="tel_num" placeholder="输入手机号码"></div>-->
-											<div class="item-input"><input type="number" name="tel_num" value="13800138000" placeholder="输入手机号码"></div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="item-content">
-									    <div class="item-media"><i class="icon ion-ios7-locked-outline"></i></div>
-										<div class="item-inner">
-											<!--<div class="item-input"><input type="password" name="psw" placeholder="输入密码"></div>-->
-											<div class="item-input"><input type="password" name="psw" value="123456" placeholder="输入密码"></div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</form>
-						<div class="content-block">
-				            <a href="#" class="button button-round active button-big" id="userlogin">登　录</a>
-				            <p class="txa-r"><a href="reset_psw.html" class="link">忘记密码？</a></p>
+                        <form action="" class="list-block">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input"><input type="number" placeholder="手机号码"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input"><input type="number" placeholder="动态码"></div>
+                                            <div class="item-after"><a href="#" class="button active">免费获取</a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input"><input type="password" placeholder="新密码"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input"><input type="password" placeholder="确认密码"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                        <div class="content-block">
+				            <a href="#" class="button button-round active button-big">确　认</a>
 						</div>
-					</div>
+                    </div>
 				</div>
 			</div>
+    		<!-- Bottom Toolbar-->
+			
     	</div>
     </div>	
 </body>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- ------------------------------------------------------------------
+***********************************************************************
+开发人员书写规范:
+1.所有缩进都用 TAB， 而不是空格。
+2.非必要，禁止用行内样式例如 <div style="display:block"> 
+
+浏览器兼容：
+	FireFox
+	Webkit内核浏览器:
+		Chrome,
+		Opear(WebKit版),
+		搜狗浏览器,
+		UC浏览器,
+		Safari 5.1+
+		Safari 7+ (Mac OS)
+		Safari 6+ (iOS)
+		Android 4.x + 
+注:WebApp，所以IE不做兼容。
+***********************************************************************
+---------------------------------------------------------------------- -->
+<meta charset="utf-8">
+<title>title</title>
+<meta name="description" content="">
+<meta name="author" content="J.Chen">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes"> 
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/framework7.css" rel="stylesheet" type="text/css">
+<link href="css/framework7.themes.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico" >
+<link rel="icon" sizes="196x196" href="touch-icon.png">
+<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+</head>
+<body>
+	<!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Views -->
+    <div class="views">
+    	<div class="view view-main">
+    		<!-- Pages -->
+			<div class="pages">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<!-- We have home navbar without left link-->
+						<a href="#" class="center sliding link user-index-noti">通知
+						    <span class="badge bg-red">5</span>
+						</a>
+					</div>
+				</div>
+				<div data-page="user_index" class="page navbar-fixed no-navbar toolbar-through no-swipeback">
+                    <div class="page-content">
+                        <form action="" class="list-block">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input"><input type="number" placeholder="手机号码"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input"><input type="number" placeholder="动态码"></div>
+                                            <div class="item-after"><a href="#" class="button active">免费获取</a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input"><input type="password" placeholder="新密码"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input"><input type="password" placeholder="确认密码"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                        <div class="content-block">
+				            <a href="#" class="button button-round active button-big">确　认</a>
+						</div>
+                    </div>
+				</div>
+			</div>
+    		<!-- Bottom Toolbar-->
+			
+    	</div>
+    </div>	
+</body>
+</html>
