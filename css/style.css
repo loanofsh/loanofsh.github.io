@@ -27,9 +27,6 @@
 
 
 ********************************************************************************************  */
-* {
-    border-width: 0.5px;
-}
 .list-block .item-link .item-inner {
 }
 .list-block input[type="text"], .list-block input[type="password"], .list-block input[type="email"], .list-block input[type="tel"], .list-block input[type="url"], .list-block input[type="date"], .list-block input[type="datetime-local"], .list-block input[type="number"], .list-block select, .list-block textarea {
@@ -38,6 +35,17 @@
 .txa-c {text-align: center;}
 .app-content-logo {
     text-align: center;
+}
+a{
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+a.active-state {
+    opacity: .3;
+    -webkit-transition-duration: 0;
+    transition-duration: 0;
 }
 .app-content-logo:before {
     content: '';
@@ -93,3 +101,61 @@
 
 .custom-select {}
 .custom-select .label-radio {background-color: #fff; color: #ff9500;}
+
+.item-title.has-line {
+    border-right: solid;
+    border-width: 1px;
+    border-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    border-width: 0.5px;
+}
