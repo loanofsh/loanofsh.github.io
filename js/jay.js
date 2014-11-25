@@ -4,6 +4,7 @@ console.log("running Jay function");
 require(["framework7.min","jquery-1.11.1.min"],function() {
     //实例化app
 	var app = new Framework7({
+        swipePanelThreshold:30,
 		animateNavBackIcon: true,
         swipePanel: 'right'
 	});
