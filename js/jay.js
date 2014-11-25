@@ -5,6 +5,12 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
     //实例化app
 	var app = new Framework7({
         swipePanelThreshold:30,
+        onAjaxStart:function(){
+            app.showPreloader();
+        },
+        onAjaxComplete:function() {
+            app.hidePreloader();
+        },
 		animateNavBackIcon: true,
         swipePanel: 'right'
 	});
