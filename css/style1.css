@@ -34,9 +34,9 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (min-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 2) {
     .app-content-logo:before {
-        background-image: url(../images/logo-@2x.png)
+        /*background-image: url(../images/logo-@2x.png)*/
     }
-    * {
+    .ios-gt-7 * {
         border-width: 0.5px;
     }
 }

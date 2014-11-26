@@ -47,7 +47,7 @@
     <div class="statusbar-overlay"></div>
     <!-- Views -->
     <div class="views">
-    	<div class="view view-main hidden-navbar theme-blue">
+    	<div class="view view-main hidden-navbar">
     		<!-- Pages -->
 			<div class="pages">
 			    <!--NAV BAR-->
@@ -59,7 +59,7 @@
 					        <!--<p>互帮贷</p>-->
 					    </div>
                         <div class="list-block">
-                            <ul class="index-select-list">
+                            <ul class="index-select-list theme-blue">
                                 <li>
                                     <a href="userlogin.html" class="item-link item-content">
                                        <div class="item-media"><i class="icon ion-person"></i></div>
@@ -114,13 +114,11 @@
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Right panel -->
-    <div class="panel custom-color panel-right panel-cover theme-blue">
-        <div class="content-block">
-            <div class="buttons-row">
-                <a href="#side-right-tab1" class="tab-link active button-round button">我要贷款</a>
-                <a href="#side-right-tab2" class="tab-link button button-round ">我要投资</a>
-            </div>    
-        </div>
+    <div class="panel custom-color panel-right panel-cover">
+        <p class="buttons-row has-margin15">
+            <a href="#side-right-tab1" class="tab-link active button-big button-round button">我要贷款</a>
+            <a href="#side-right-tab2" class="tab-link button button-big button-round ">我要投资</a>
+        </p>    
         <div class="content-tabs">
             <div class="tabs">
                 <div class="tab active" id="side-right-tab1">
@@ -211,9 +209,9 @@
 							</p>
 						</div>
                     </form>
-                    <div class="content-block">
-                        <a href="#" class="button button-round button-fill">发 布</a>
-                    </div>
+                    <p class="has-margin15">
+                        <a href="#" class="button button-round button-big button-fill">发 布</a>
+                    </p>
                 </div>
                 <div class="tab" id="side-right-tab2">
                     <form action="" class="list-block inset">
@@ -249,13 +247,54 @@
                             </li>
                         </ul>
                     </form>
-                    <div class="content-block">
-                        <a href="#" class="button button-round button-fill">发 布</a>
-                    </div>
+                    <p class="has-margin15">
+                        <a href="#" class="button button-round button-big button-fill">发 布</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="panel panel-left panel-reveal">
+        <div class="list-block panel-black">
+            <ul>
+                <li>
+                   <a href="#" class="item-link">
+                        <div class="item-content">
+                            <div class="item-inner">个人设置</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="item-link">
+                        <div class="item-content">
+                            <div class="item-inner">意见反馈</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="item-link">
+                        <div class="item-content">
+                            <div class="item-inner">平台使用介绍</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                   <a href="" class="item-link">
+                       <div class="item-content">
+                           <div class="item-inner">积分规则</div>
+                       </div>
+                   </a>
+                </li>
+                <li>
+                   <a href="" class="item-link">
+                       <div class="item-content">
+                           <div class="item-inner">邀请好友</div>
+                       </div>
+                   </a>
+                </li>
+            </ul>
+        </div>
+    </div>    
 <script src="js/require.js" data-main="js/main" ></script>	
 </body>
 </html>

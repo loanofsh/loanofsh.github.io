@@ -1,9 +1,13 @@
 //来来来，到这里运行你的Javascript
 function jayfunction() {
 console.log("running Jay function");
+require(["fastclick"],function(Fastclick){
+    Fastclick.attach(document.body);
+});    
 require(["framework7.min","jquery-1.11.1.min"],function() {
     //实例化app
 	var app = new Framework7({
+        fastClicks:false,
         swipePanelThreshold:30,
         onAjaxStart:function(){
             app.showPreloader();
@@ -55,7 +59,10 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
             })
         };
         showfunction();
-        
+        app.params.swipePanel = "left";
+    });
+    app.onPageBeforeRemove("user_index", function() {
+        app.params.swipePanel = "right";
     });
 });
 //@jayfunction end
