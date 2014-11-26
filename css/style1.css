@@ -37,7 +37,15 @@ only screen and (min-device-pixel-ratio: 2) {
         /*background-image: url(../images/logo-@2x.png)*/
     }
     .ios-gt-7 * {
-        border-width: 0.5px;
+        border-width: 0.5px !important;
+    }
+    
+    .ios-gt-7 .buttons-row .button {
+        border-left-width: 0 !important;
+    }
+    
+    .ios-gt-7 .buttons-row .button:first-child {
+        border-left-width: 0.5px !important;
     }
 }
 
