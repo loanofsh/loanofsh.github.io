@@ -6,13 +6,22 @@ console.log("running Jay function");
 }); */   
 require(["framework7.min","jquery-1.11.1.min"],function() {
     //实例化app
+    var PreloaderTimer;
 	var app = new Framework7({
         //fastClicks:false,
+        modalButtonOk:"确定",
+        modalButtonCancel:"取消",
         swipePanelThreshold:30,
         onAjaxStart:function(){
             app.showPreloader();
+            //当1分钟你的网络还没有反应的话，那么抛出超时交互流程
+            PreloaderTimer = setTimeout(function() {
+                app.hidePreloader();
+                app.alert('似乎你的网络出了点问题','');
+            }, 6000);
         },
         onAjaxComplete:function() {
+            clearTimeout(PreloaderTimer);
             app.hidePreloader();
         },
 		animateNavBackIcon: true,
@@ -64,6 +73,55 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
             closefunction();
         }).on("click", ".item-link", function(e) {
             app.closePanel();
+        });
+        $("#feedback").off(".feedback_btn");
+        $("#feedback").on("click.feedback_btn", function(e) {
+            var popupHTML = '<div class="popup feedback-popup">'+
+                    '<div class="list-block inset">'+
+                    '<ul>'+
+                        '<li>'+
+                            '<div class="item-content">'+
+                                '<div class="item-inner">'+
+                                    '<div class="item-input">'+
+                                        '<textarea placeholder="意见反馈"></textarea>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</li>'+
+                    '</ul>'+
+                    '</div>'+
+                    '<div class="content-block">'+
+                        '<div class="row">'+
+                            '<div class="col-50"><a href="#" class="button button-big button-fill color-red button-round close-popup">取消</a></div>'+
+                            '<div class="col-50"><a href="#" class="button button-big button-fill color-green button-round" id="feedback_send">发送</a></div>'+
+                        '</div>'+
+                    '</div>'+
+                  '</div>';
+            app.popup(popupHTML);
+            $(".feedback-popup").on("opened", function() {
+               $("#feedback_send").on("click", function() {
+                    app.showPreloader("发送中...");
+                    //模拟发送成功
+                    setTimeout(function(){
+                        app.hidePreloader();
+                        app.alert("您的意见我们已收到，感谢！","");
+                        app.closeModal(".feedback-popup");
+                    }, 300)
+               });
+            });
+            
+        });
+        
+        
+        $("#Invite_friends").off('.inv');
+        $("#Invite_friends").on('click.inv', function(e) {
+            app.prompt('邀请好友(手机号码)','', function(val) {
+                if (val == '' || val == null ) {
+                    app.alert('您没有邀请任何人','');
+                    return;
+                }
+                app.alert('已经向'+val+'发送邀请','');
+            })
         });
     });
     /*app.onPageBeforeRemove("user_index", function() {

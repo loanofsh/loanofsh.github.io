@@ -209,3 +209,23 @@ a.active-state {
     outline:none;
 }
 /*! endblock alice/table/1.0.1/table-debug.css */
+.feedback-popup {
+    background-color: #efeff4;
+}
+.content-filter-block-tab {
+    margin: 0 15px;
+    padding-top: 15px;
+}
+.content-filter-block-tab label.label-radio {
+    padding: 0;
+}
+.content-filter-block-tab label.label-radio input[type="radio"] ~ .item-inner {
+    padding-right: 0;
+}
+.content-filter-block-tab label.label-radio input[type="radio"]:checked ~ .item-inner {
+    background-image: none;
+    background-color: #007aff;
+    color: #fff;
+    padding-bottom: 4px;
+    margin-bottom: -4px;
+}
