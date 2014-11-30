@@ -146,7 +146,41 @@ a.active-state {
 .index_menus_wrap {
 		
 }
+.index_menus_wrap .row>[class*=col-]{
+    padding-bottom: 15px;
+    overflow: hidden;
+}
 
+.index_menus_wrap .row>[class*=col-]:first-child .index_link {
+    float: right;
+}
+
+.index_menus_wrap .index_link {
+    width: 96px;
+    height: 96px;
+    background-color: #b40604;
+    display: block;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    background: -moz-radial-gradient(center, ellipse cover, #b40604 0%, #4F0000 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b40604), color-stop(100%,#4F0000)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #b40604 0%,#4F0000 100%); /* W3C */
+}
+
+.index_menus_wrap .icon {
+    font-size: 48px;
+    line-height: 84px;
+    margin-bottom: -24px;
+}
+.index_menus_wrap .linkfont {
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+}
 .page[data-page='user_index'].no-navbar .page-content {
     padding-top: 44px;
 }
