@@ -155,7 +155,12 @@ a.active-state {
     float: right;
 }
 
+.index_menus_wrap .row>[class*=col-]:last-child .index_link {
+    float: left;
+}
+
 .index_menus_wrap .index_link {
+    overflow: hidden;
     width: 96px;
     height: 96px;
     background-color: #b40604;
@@ -174,7 +179,9 @@ a.active-state {
 .index_menus_wrap .icon {
     font-size: 48px;
     line-height: 84px;
+    height: 84px;
     margin-bottom: -24px;
+    display: inline-block;
 }
 .index_menus_wrap .linkfont {
     height: 36px;

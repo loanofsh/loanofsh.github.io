@@ -3,7 +3,7 @@ function jayfunction() {
 console.log("running Jay function");
 /*require(["fastclick"],function(Fastclick){
     Fastclick.attach(document.body);
-}); */   
+}); */
 require(["framework7.min","jquery-1.11.1.min"],function() {
     //实例化app
     var PreloaderTimer;
@@ -27,12 +27,15 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
 		animateNavBackIcon: true,
         swipePanel: 'right'
 	});
+    window.appframe = app;
 	var $7 = Dom7;
 	// Add view 实例化view层
 	var mainView = app.addView('.view-main', {
 		dynamicNavbar: true
 	});
     mainView.hideNavbar();
+    app.hidePreloader();
+    
     //用户登录
     $7(".views").on("click", "#userlogin", function(e) {
         var loginformData = app.formToJSON("#USER_LOGIN_FORM");
