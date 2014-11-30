@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- ------------------------------------------------------------------
+***********************************************************************
+开发人员书写规范:
+1.所有缩进都用 TAB， 而不是空格。
+2.非必要，禁止用行内样式例如 <div style="display:block"> 
+
+浏览器兼容：
+	FireFox
+	Webkit内核浏览器:
+		Chrome,
+		Opear(WebKit版),
+		搜狗浏览器,
+		UC浏览器,
+		Safari 5.1+
+		Safari 7+ (Mac OS)
+		Safari 6+ (iOS)
+		Android 4.x + 
+注:WebApp，所以IE不做兼容。
+***********************************************************************
+---------------------------------------------------------------------- -->
+<meta charset="utf-8">
+<title>title</title>
+<meta name="description" content="">
+<meta name="author" content="J.Chen">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes"> 
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/framework7.css" rel="stylesheet" type="text/css">
+<link href="css/framework7.themes.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico" >
+<link rel="icon" sizes="196x196" href="touch-icon.png">
+<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+</head>
+<body>
+	<!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Views -->
+    <div class="views">
+    	<div class="view view-main">
+    		<!-- Pages -->
+			<div class="pages">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<!-- We have home navbar without left link-->
+						<a href="#" class="left link back"><i class="icon icon-back"></i><span>取消</span></a>
+						<div class="center sliding">贷款申请</div>
+						<a href="#" class="right link">确认</a>
+					</div>
+				</div>
+				<div data-page="app_index_loan" class="page navbar-fixed toolbar-through">
+                    <div class="page-content">
+						<form action="" class="list-block inset">
+							<ul>
+								<li class="item-content">
+									<div class="item-inner">
+										<div class="item-input">
+											<input type="text" name="name" placeholder="姓名">
+										</div>
+									</div>
+								</li>
+								<li class="item-content">       
+									<div class="item-inner">
+										<div class="item-input">
+											<input type="text" name="phone" placeholder="联系电话">
+										</div>
+									</div>
+								</li>    
+								<li class="item-content">    
+									<div class="item-inner">
+										<div class="item-input">
+											<input type="text" name="phone" placeholder="贷款金额">
+										</div>
+										<div class="item-after">万</div>
+									</div>
+								</li>
+								<li class="item-content">    
+									<div class="item-inner">
+										<div class="item-input">
+											<input type="text" name="address" placeholder="居住地址">
+										</div>
+									</div>
+								</li>
+							</ul>
+							
+							<div class="custom-select">
+								<p>
+									<div class="buttons-row">
+										<label class="button label-radio item-content"><!-- Checked by default -->
+											<input type="radio" name="my-radio" value="has_house" checked="">
+											<div class="item-inner">
+												<div class="item-title">有房</div>
+											</div>
+										</label>
+			
+										<label class="button label-radio item-content"><!-- Checked by default -->
+											<input type="radio" name="my-radio" value="no_house" checked="">
+											<div class="item-inner">
+												<div class="item-title">无房</div>
+											</div>
+										</label>
+									</div>
+								</p>
+								<p>
+									<div class="buttons-row">
+										<label class="button label-radio item-content"><!-- Checked by default -->
+											<input type="radio" name="my-radio2" value="has_car" checked="">
+											<div class="item-inner">
+												<div class="item-title">有车</div>
+											</div>
+										</label>
+			
+										<label class="button label-radio item-content"><!-- Checked by default -->
+											<input type="radio" name="my-radio2" value="no_car" checked="">
+											<div class="item-inner">
+												<div class="item-title">无车</div>
+											</div>
+										</label>
+									</div>
+								</p>
+								<p>
+									<div class="buttons-row">
+										<label class="button label-radio item-content"><!-- Checked by default -->
+											<input type="radio" name="my-radio3" value="company" checked="">
+											<div class="item-inner">
+												<div class="item-title">公司</div>
+											</div>
+										</label>
+			
+										<label class="button label-radio item-content"><!-- Checked by default -->
+											<input type="radio" name="my-radio3" value="person" checked="">
+											<div class="item-inner">
+												<div class="item-title">个人</div>
+											</div>
+										</label>
+									</div>
+								</p>
+							</div>
+						</form>
+                    </div>
+				</div>
+			</div>
+    		<!-- Bottom Toolbar-->
+    	</div>
+    </div>	
+</body>
+</html>
