@@ -148,7 +148,10 @@ a.active-state {
 }
 .index_menus_wrap .row>[class*=col-]{
     padding-bottom: 15px;
-    overflow: hidden;
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
+    -webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
 .index_menus_wrap .row>[class*=col-]:first-child .index_link {
@@ -174,6 +177,33 @@ a.active-state {
     background: -o-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* Opera 12+ */
     background: -ms-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* IE10+ */
     background: radial-gradient(ellipse at center, #b40604 0%,#4F0000 100%); /* W3C */
+    
+    opacity: 0;
+}
+
+.watch-active-state .index_link {
+    -webkit-animation: indexLinksShow 1s linear both;
+    animation: indexLinksShow 1s linear both;
+    -webkit-animation-timing-function: cubic-bezier(0, 1, .60, 1);
+    animation-timing-function: cubic-bezier(0, 1, .60, 1);
+}
+
+.watch-active-state .il_1 {-webkit-transform-origin: right bottom !important;-ms-transform-origin: right bottom !important;transform-origin: right bottom !important;}
+.watch-active-state .il_2 {-webkit-transform-origin: left bottom !important;-ms-transform-origin: left bottom !important;transform-origin: left bottom !important;}
+.watch-active-state .il_3 {-webkit-transform-origin: right top !important;-ms-transform-origin: right top !important;transform-origin: right top !important;}
+.watch-active-state .il_4 {-webkit-transform-origin: left top !important;-ms-transform-origin: left top !important;transform-origin: left top !important;}
+
+.watch-active-state .il_1 {-webkit-animation-delay: 0s;animation-delay: 0s}
+.watch-active-state .il_2 {-webkit-animation-delay: .1s;animation-delay: .1s}
+.watch-active-state .il_3 {-webkit-animation-delay: .2s;animation-delay: .2s}
+.watch-active-state .il_4 {-webkit-animation-delay: .3s;animation-delay: .3s}
+@-webkit-keyframes indexLinksShow {
+    from {opacity: 0; -webkit-transform: scale(2.5) translateZ(500px); transform: scale(2.5) translateZ(500px);}
+    to {opacity: 1;-webkit-transform: scale(1) translateZ(0px);transform: scale(1) translateZ(0px);}
+}
+@keyframes indexLinksShow {
+    from {opacity: 0; -webkit-transform: scale(2.5) translateZ(500px); transform: scale(2.5) translateZ(500px);}
+    to {opacity: 1;-webkit-transform: scale(1) translateZ(0px);transform: scale(1) translateZ(0px);}
 }
 
 .index_menus_wrap .icon {
