@@ -134,6 +134,17 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
             app.params.swipePanel = "right";
             $('.panel-left').off('.uiside');
         }
+        
+        if (
+            pageArry.name == 'user_loans' || 
+            pageArry.name == 'user_inv' ||
+            pageArry.name == 'comp_loans' || 
+            pageArry.name == 'comp_inv'
+        ) {
+            app.closeNotification();
+            $(".user_index_show_noti").remove();
+            mainView.showNavbar();
+        }
     });
 });
 //@jayfunction end
