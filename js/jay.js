@@ -7,13 +7,16 @@ console.log("running Jay function");
 require(["framework7.min","jquery-1.11.1.min"],function() {
     //实例化app
     var PreloaderTimer;
+    var showPreloaderTimer;
 	var app = new Framework7({
         //fastClicks:false,
         modalButtonOk:"确定",
         modalButtonCancel:"取消",
         swipePanelThreshold:30,
         onAjaxStart:function(){
-            app.showPreloader();
+            showPreloaderTimer = setTimeout(function() {
+                app.showPreloader();
+            },120);
             //当1分钟你的网络还没有反应的话，那么抛出超时交互流程
             PreloaderTimer = setTimeout(function() {
                 app.hidePreloader();
@@ -21,6 +24,7 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
             }, 6000);
         },
         onAjaxComplete:function() {
+            clearTimeout(showPreloaderTimer);
             clearTimeout(PreloaderTimer);
             app.hidePreloader();
         },
