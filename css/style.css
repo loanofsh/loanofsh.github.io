@@ -143,6 +143,10 @@ a.active-state {
     padding: 1px 5px;
 }
 
+.index_menus_wrap {
+		
+}
+
 .page[data-page='user_index'].no-navbar .page-content {
     padding-top: 44px;
 }
