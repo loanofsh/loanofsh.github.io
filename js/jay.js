@@ -12,7 +12,6 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
         //fastClicks:false,
         modalButtonOk:"确定",
         modalButtonCancel:"取消",
-        swipePanelThreshold:80,
         swipePanelActiveArea:20,
         onAjaxStart:function(){
             showPreloaderTimer = setTimeout(function() {

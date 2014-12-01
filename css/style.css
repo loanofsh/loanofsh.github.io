@@ -168,7 +168,7 @@ a.active-state {
     height: 96px;
     background-color: #b40604;
     display: block;
-    color: #fff;
+    color: #f2d07c;
     border-radius: 10px;
     text-align: center;
     background: -moz-radial-gradient(center, ellipse cover, #b40604 0%, #4F0000 100%); /* FF3.6+ */
@@ -331,13 +331,25 @@ a.active-state {
 	margin-top: 0;
 }
 .goodusers i.active {
-	border-color: #460a00;
+	
+    border-color: #460a00;
 	background-image: -moz-linear-gradient(154deg,rgba(219,124,6,1.00) 0%,rgba(252,243,152,1.00) 50%,rgba(219,124,6,1.00) 100%);
 	background-image: -webkit-linear-gradient(154deg,rgba(219,124,6,1.00) 0%,rgba(252,243,152,1.00) 50%,rgba(219,124,6,1.00) 100%);
 	background-image: -ms-linear-gradient( 0deg, rgb(219,124,6) 0%, rgb(252,243,152) 50%, rgb(219,124,6) 100%);
-	color: #460a00;
+	color: #460a00 !important;
 	text-shadow: 1px 1px 0 rgba(255,249,191,1.00);
 	background-image: -o-linear-gradient(154deg,rgba(219,124,6,1.00) 0%,rgba(252,243,152,1.00) 50%,rgba(219,124,6,1.00) 100%);
 	background-image: linear-gradient(296deg,rgba(219,124,6,1.00) 0%,rgba(252,243,152,1.00) 50%,rgba(219,124,6,1.00) 100%);
 	font-style:normal;
+}
+
+
+.botton-gold {
+    border-color: #460a00 !important;
+    text-shadow: 1px 1px 0 rgba(255,249,191,1.00);
+    background-image: -webkit-linear-gradient(90deg, rgb(219,124,6) 0%, rgb(252,243,152) 50%, rgb(219,124,6) 100%) !important;
+    background-image: -o-linear-gradient(90deg, rgb(219,124,6) 0%, rgb(252,243,152) 50%, rgb(219,124,6) 100%) !important;
+    background-image: linear-gradient(90deg, rgb(219,124,6) 0%, rgb(252,243,152) 50%, rgb(219,124,6) 100%) !important;
+    color: #460a00 !important;
+    box-shadow: inset 0 0 0 1px #460a00;
 }
