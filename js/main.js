@@ -24,9 +24,9 @@ require.config({
 
 //加载对应css模块
 require([
-	//"css!http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min",
-	"css!../css/style1",
-	"css!../css/style2"
+//	"css!http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min",
+//	"css!../css/style1",
+//	"css!../css/style2"
 ]);
 
 
