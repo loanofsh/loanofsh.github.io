@@ -4,8 +4,15 @@ console.log("running Jay function");
 /*require(["fastclick"],function(Fastclick){
     Fastclick.attach(document.body);
 }); */
-require(["framework7.min","jquery-1.11.1.min"],function() {
-    //实例化app
+require.config({
+	shim:{
+		"jquery.scrollbox": {
+			deps:['jquery-1.11.1.min']
+		}
+	}
+})
+require(["framework7.min","jquery.scrollbox"],function() {
+	//实例化app
     var PreloaderTimer;
     var showPreloaderTimer;
 	var app = new Framework7({
@@ -42,6 +49,7 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
     mainView.hideNavbar();
     app.hidePreloader();
     
+	
     //用户登录
     $7(".views").on("click", "#userlogin", function(e) {
         var loginformData = app.formToJSON("#USER_LOGIN_FORM");
@@ -69,12 +77,25 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
             mainView.hideNavbar();
             app.addNotification({
                 additionalClass:"user_index_show_noti",
+				closeOnClick:true,
                 onClose:function() {
                     closefunction();
                 },
-                title:"Hello world",
-                message:"yes"
+                custom:(function() {
+					var html = $("<div>");
+					html.append('<div id="scroll-text" class="scroll-text"><ul></ul></div>');
+					html.find('#scroll-text ul').append('<li>个人贷广告通知信息1</li>');
+					html.find('#scroll-text ul').append('<li>个人贷广告通知信息2</li>');
+					html.find('#scroll-text ul').append('<li>个人贷广告通知信息3</li>');
+					html.find('#scroll-text ul').append('<li>个人贷广告通知信息4</li>');
+					html.find('#scroll-text ul').append('<li>个人贷广告通知信息5</li>');
+					html.find('#scroll-text ul').append('<li>个人贷广告通知信息6</li>');
+					html.find('#scroll-text ul').append('<li>个人贷广告通知信息7</li>');
+					html = html.html();
+					return html;
+				})()
             });
+			$('#scroll-text').scrollbox();
         };
         showfunction();
         app.params.swipePanel = "left";
@@ -144,12 +165,7 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
             $('.panel-left').off('.uiside');
         }
         
-        if (
-            pageArry.name == 'user_loans' || 
-            pageArry.name == 'user_inv' ||
-            pageArry.name == 'comp_loans' || 
-            pageArry.name == 'comp_inv'
-        ) {
+        if (app.mainView.activePage.name !== 'user_index') {
             app.closeNotification();
             $(".user_index_show_noti").remove();
             mainView.showNavbar();
@@ -166,6 +182,53 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
 				})
 			});
 		}
+		
+		
+		if (pageArry.name == "user_integration") {
+			$("#ingBtn").on("click", function() {
+					var buttons1 = [
+						{
+							text: '积分操作',
+							label: true
+						},
+						{
+							text: '积分充值',
+							bold: true,
+							onClick:function() {
+								mainView.router.load({
+									url:"user_recharge.html"
+								})
+							}
+						},
+						{
+							text: '积分转让',
+							onClick:function() {
+								mainView.router.load({
+									url:"user_integ_transfer.html"
+								})
+							}
+						},
+						{
+							text: '积分记录',
+							onClick:function() {
+								mainView.router.load({
+									url:"user_integ_rec.html"
+								})
+							}
+							
+						}
+					];
+					var buttons2 = [
+						{
+							text: '取消',
+							color: 'red'
+						}
+					];
+					var groups = [buttons1, buttons2];
+					app.actions(groups);
+			})
+		}
+			
     });
 });
 //@jayfunction end

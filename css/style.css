@@ -231,7 +231,7 @@ a.active-state {
     border-collapse:collapse;
     border:1px solid #ccc;
     width:100%;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;    
 }
 .ui-table tr:nth-child(even),
@@ -361,4 +361,44 @@ a.active-state {
 }
 .theme-brown .modal-button {
 	color: #610006;
+}
+
+.scroll-text {
+width: 100%;
+height: 44px;
+overflow: hidden;
+}
+.scroll-text ul {
+	background: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0 20px !important;
+}
+
+.scroll-text ul li {
+	height: 22px;
+	line-height: 22px;
+	font-size: 12px;
+}
+
+.number_block .content-block-title {
+	color: #f2d07c;
+}
+.number_block .content-block-inner {
+	background: -moz-radial-gradient(center, ellipse cover, #b40604 0%, #4F0000 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b40604), color-stop(100%,#4F0000)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #b40604 0%,#4F0000 100%); /* W3C */
+	font-size: 64px;
+	color: #f2d07c;
+	border-top: none;
+	border-bottom: none;
+}
+.number_block .int-color {
+	font-weight: bolder;
+}
+.no-elipsis {
+	text-overflow:clip;
 }
