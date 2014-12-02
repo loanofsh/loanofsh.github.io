@@ -47,6 +47,9 @@ only screen and (min-device-pixel-ratio: 2) {
     .ios-gt-7 .buttons-row .button:first-child {
         border-left-width: 0.5px !important;
     }
+	.ios-gt-7 .modal-button {
+		border-right-width: 0.5px ;
+	}
 }
 
 

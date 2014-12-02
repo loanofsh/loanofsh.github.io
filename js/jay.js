@@ -154,6 +154,18 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
             $(".user_index_show_noti").remove();
             mainView.showNavbar();
         }
+    }).on("pageInit", function(e) {
+		var pageArry = e.detail.page;
+		if (pageArry.name == "user_setting") {
+			//安全退出按钮
+			$("#safe_exit").on("click", function(e) {
+				app.confirm("确定退出？","", function() {
+					mainView.router.load({
+						url:"index.html"
+					})
+				})
+			});
+		}
     });
 });
 //@jayfunction end
