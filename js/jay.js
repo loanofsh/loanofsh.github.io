@@ -10,7 +10,9 @@ require(["framework7.min","jquery-1.11.1.min"],function() {
     var showPreloaderTimer;
 	var app = new Framework7({
         //fastClicks:false,
+        modalTitle:"个人贷",
         modalButtonOk:"确定",
+        modalPreloaderTitle:"加载中...",
         modalButtonCancel:"取消",
         swipePanelActiveArea:20,
         onAjaxStart:function(){
