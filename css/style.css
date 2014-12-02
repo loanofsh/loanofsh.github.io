@@ -344,7 +344,7 @@ a.active-state {
 }
 
 
-.botton-gold {
+.botton-gold.active-state {
     border-color: #460a00 !important;
     text-shadow: 1px 1px 0 rgba(255,249,191,1.00);
     background-image: -webkit-linear-gradient(90deg, rgb(219,124,6) 0%, rgb(252,243,152) 50%, rgb(219,124,6) 100%) !important;
