@@ -165,7 +165,7 @@ require(["framework7.min","jquery.scrollbox"],function() {
             $('.panel-left').off('.uiside');
         }
         
-        if (app.mainView.activePage.name !== 'user_index') {
+        if (app.mainView.activePage.name !== 'user_index' && app.mainView.activePage.name !== "index") {
             app.closeNotification();
             $(".user_index_show_noti").remove();
             mainView.showNavbar();
