@@ -39,17 +39,14 @@
 .txa-c {text-align: center;}
 .txa-l {text-align: left;}
 .txa-r {text-align: right;}
-
+.pdtb15 {padding: 15px 0;}
+.pdt15 {padding-top: 15px;}
+.pdb15 {padding-bottom: 15px;}
 a{
     -webkit-transition-property: opacity;
     transition-property: opacity;
     -webkit-transition-duration: .3s;
     transition-duration: .3s;
-}
-a.active-state {
-    opacity: .3;
-    -webkit-transition-duration: 0;
-    transition-duration: 0;
 }
 .app-content-logo {
     padding-top: 20px;
@@ -298,6 +295,11 @@ a.active-state {
 .content-filter-block-tab {
     margin: 0 15px;
     padding-top: 15px;
+	position: -webkit-sticky;
+	position: sticky;
+	background-color: #f0f1f3;
+	top: 0px;
+	left: 0px;
 }
 .content-filter-block-tab label.label-radio {
     padding: 0;

@@ -4035,7 +4035,9 @@ body > .photo-browser .toolbar {
 .theme-brown i.icon.icon-back {
   background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20'><path d='M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z' fill='#610000'/></svg>");
 }
-
+.theme-brown .navbar .center.sliding {
+	color: #610000;
+}
 .color-gray {
   color: #8e8e93;
 }

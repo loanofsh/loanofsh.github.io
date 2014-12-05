@@ -21,7 +21,7 @@ require(["framework7.min","jquery.scrollbox"],function() {
         modalButtonOk:"确定",
         modalPreloaderTitle:"加载中...",
         modalButtonCancel:"取消",
-        swipePanelActiveArea:20,
+        swipePanelActiveArea:false,
         onAjaxStart:function(){
             showPreloaderTimer = setTimeout(function() {
                 app.showPreloader();
@@ -37,8 +37,8 @@ require(["framework7.min","jquery.scrollbox"],function() {
             clearTimeout(PreloaderTimer);
             app.hidePreloader();
         },
-		animateNavBackIcon: true,
-        swipePanel: 'right'
+		animateNavBackIcon: true
+//		,swipePanel: 'right'
 	});
     window.appframe = app;
 	var $7 = Dom7;
@@ -98,12 +98,17 @@ require(["framework7.min","jquery.scrollbox"],function() {
 			$('#scroll-text').scrollbox();
         };
         showfunction();
-        app.params.swipePanel = "left";
+//        app.params.swipePanel = "left";
         $('.panel-left').on('opened.uiside', function() {
             closefunction();
+//			app.params.swipePanelActiveArea = false;
         }).on("click", ".item-link", function(e) {
             app.closePanel();
-        });
+        }).on('closed', function(e) {
+//			app.params.swipePanelActiveArea = 20;
+		});
+		
+		
         $("#feedback").off(".feedback_btn");
         $("#feedback").on("click.feedback_btn", function(e) {
             var popupHTML = '<div class="popup feedback-popup">'+
@@ -161,15 +166,20 @@ require(["framework7.min","jquery.scrollbox"],function() {
     $7(document).on('pageAfterAnimation',function(e) {
         var pageArry = e.detail.page;
         if (pageArry.name != "user_index") {
-            app.params.swipePanel = "right";
+//            app.params.swipePanel = "right";
             $('.panel-left').off('.uiside');
         }
-        
-        if (app.mainView.activePage.name !== 'user_index' && app.mainView.activePage.name !== "index") {
+        console.log(mainView.activePage.name)
+        if (mainView.activePage.name !== 'user_index' && mainView.activePage.name !== "index") {
             app.closeNotification();
             $(".user_index_show_noti").remove();
             mainView.showNavbar();
         }
+		
+		if (mainView.activePage.name === 'index') {
+			mainView.hideNavbar();
+		}
+		
     }).on("pageInit", function(e) {
 		var pageArry = e.detail.page;
 		if (pageArry.name == "user_setting") {
