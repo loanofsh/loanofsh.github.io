@@ -218,8 +218,12 @@ a{
 .page[data-page='user_index'].no-navbar .page-content {
     padding-top: 44px;
 }
-.panel-black ul {background-color: #1B1B1B; color: #9D9D9D;border-color: #353535;}
-.panel-black .item-inner{border-color: #272727;}
+.panel-black ul {
+	background-color: rgba(27, 27, 27, 0.27);
+	color: #9D9D9D;
+	border-color: #AB0000;
+}
+.panel-black .item-inner{border-color: #840000;}
 
 
 /*! block alice/table/1.0.1/table css */
@@ -403,4 +407,13 @@ overflow: hidden;
 }
 .no-elipsis {
 	text-overflow:clip;
+}
+
+.theme-brown .panel-left {
+	background: -moz-radial-gradient(center, ellipse cover, #b40604 0%, #4F0000 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b40604), color-stop(100%,#4F0000)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #b40604 0%,#4F0000 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #b40604 0%,#4F0000 100%); /* W3C */	
 }
